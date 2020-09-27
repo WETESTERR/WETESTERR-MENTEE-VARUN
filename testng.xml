@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Ecommerce regression suite" verbose="1"> 
+
+<test name="Ecommerce Demo Page" parallel="methods" thread-count="3">
+<classes>
+ <class name="com.qa.tests.DressesPageTest"/> 
+ <!--class name="com.qa.tests.WomensPageTest"/--> 
+ <!--class name="com.qa.tests.TShirtsPageTest"/-->
+</classes>
+</test>
+</suite>

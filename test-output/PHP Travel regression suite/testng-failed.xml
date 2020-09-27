@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [PHP Travel regression suite]">
+  <test thread-count="5" name="PHP Travel Demo Page(failed)">
+    <classes>
+      <class name="com.qa.tests.DressesPageTest">
+        <methods>
+          <include name="Discountdresses"/>
+          <include name="Numberdresses"/>
+          <include name="initialize"/>
+          <include name="Pricedresses"/>
+          <include name="Listdresses"/>
+        </methods>
+      </class> <!-- com.qa.tests.DressesPageTest -->
+    </classes>
+  </test> <!-- PHP Travel Demo Page(failed) -->
+</suite> <!-- Failed suite [PHP Travel regression suite] -->

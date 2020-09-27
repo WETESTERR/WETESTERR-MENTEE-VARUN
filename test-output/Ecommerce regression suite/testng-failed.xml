@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Ecommerce regression suite]">
+  <test thread-count="5" name="Ecommerce Demo Page(failed)" parallel="methods">
+    <classes>
+      <class name="com.qa.tests.DressesPageTest">
+        <methods>
+          <include name="initialize"/>
+          <include name="Discountdresses"/>
+          <include name="Numberdresses"/>
+          <include name="teardown"/>
+          <include name="Pricedresses"/>
+          <include name="Listdresses"/>
+        </methods>
+      </class> <!-- com.qa.tests.DressesPageTest -->
+    </classes>
+  </test> <!-- Ecommerce Demo Page(failed) -->
+</suite> <!-- Failed suite [Ecommerce regression suite] -->
