@@ -20,64 +20,55 @@ public class DressesPage {
 
 	ArrayList<String> actualDressList = new ArrayList<String>();
 	ArrayList<String> actualDressPrice = new ArrayList<String>();
-	ArrayList<String> actualDressDiscount = new ArrayList<String>();
-	
-	private List<WebElement> DressNumber ;
-	private List<WebElement> elementsDressList;
-	private List<WebElement> pricelistofDresses;
-	private List<WebElement> listofdiscount;
+	ArrayList<String> actualDressDiscount = new ArrayList<String>();	
 	
 	public DressesPage(WebDriver driver){
 		this.driver = driver;
 		elementUtil = new ElementUtil(this.driver);
 	}
 	
-	public List<WebElement> numberofDresses() throws InterruptedException {
-		 
-		elementUtil.waitForElementPresent(dresses, 10);
-		elementUtil.doClick(dresses);
+	public List<WebElement> numberofDresses() throws InterruptedException {	
+		List<WebElement> dressNumber ;
+		clickonDressbutton();
 		elementUtil.visibilityOfAllElements(numofDresses, 10);
-		DressNumber = driver.findElements(numofDresses);
-		return (DressNumber);
+		dressNumber = driver.findElements(numofDresses);
+		return (dressNumber);
 	}
 	
 	public ArrayList<String> listofDress(){
-		elementUtil.waitForElementPresent(dresses, 10);
-		elementUtil.doClick(dresses); 
-		elementsDressList = driver.findElements(listofdresses);   
+		List<WebElement> elementsDresslist;
+		elementsDresslist = driver.findElements(listofdresses);   
 		System.out.println("\nList of Dresses :");
-		for(WebElement list : elementsDressList)
+		for(WebElement list : elementsDresslist)
 		{
 			actualDressList.add(list.getText());
-//			System.out.println(list.getText());
+			System.out.println(list.getText());
 		} 
 		Collections.sort(actualDressList);
 		return actualDressList;
 	}
 	
 	public ArrayList<String> priceofDress(){
-		elementUtil.waitForElementPresent(dresses, 10);
-		elementUtil.doClick(dresses);
-		pricelistofDresses = driver.findElements(priceofDresses);
+		List<WebElement> priceList;
+		priceList = driver.findElements(priceofDresses);
 		System.out.println("\nPrice of Dresses :");
-		for(WebElement list : pricelistofDresses)
+		for(WebElement list : priceList)
 		{
 			actualDressPrice.add(list.getText());
-//			System.out.println(list.getText());
+			System.out.println(list.getText());
 		} 
 		Collections.sort(actualDressPrice);
 		return actualDressPrice;
 	}
 	
 	public ArrayList<String> discountonDress(){
-		elementUtil.waitForElementPresent(dresses, 10);
-		elementUtil.doClick(dresses);
-		listofdiscount = driver.findElements(discountonDresses);
+		List<WebElement> listofDiscount;
+		listofDiscount = driver.findElements(discountonDresses);
 		System.out.println("\nDiscount on Dresses:");
-		for(WebElement list : listofdiscount)
+		for(WebElement list : listofDiscount)
 		{
 			actualDressDiscount.add(list.getText());
-	//		System.out.println(list.getText());
+			System.out.println(list.getText());
 		} 
 		System.out.println("--------------------------------------------------------------------------------");
 		Collections.sort(actualDressDiscount);
